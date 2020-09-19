@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+</head>
+
+<body>
+
+  <nav class=" container-fluid jumbotron navbar navbar-defaul">
+    <div class="navbar-header ">
+      <a href="" class="navbar-brand">Watches</a>
+
+      <span class="link">
+        <a class="btn btn-light " href="">Home</a>
+        <a class="btn btn-light " href="/product">Add Product</a>
+        <a class="btn btn-light " href="/udash">User Management</a>
+        <a class="btn btn-light " href="/pdash">Product Management</a>
+        <a class="btn btn-light " href="">Logout</a>
+      </span>
+    </div>
+  </nav>
+
+    <h2 style="font-weight: bolder; " class="text-center text-primary">Admin Profile Page</h2>
+
+
+  <div class="container emp-profile">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h4>
+            {{user.userName}}
+          </h4>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <input type="submit" [routerLink]="['/uu',user.id]" class="btn btn-primary" name="btnAddMore"
+          value="Edit Profile" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+
+          <div class="row">
+            <div class="col-md-6">
+              <label>Name</label>
+            </div>
+            <div class="col-md-6">
+              <p>{{user.userName}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Email</label>
+            </div>
+            <div class="col-md-6">
+              <p>{{user.userEmail}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Age</label>
+            </div>
+            <div class="col-md-6">
+              <p>{{user.userAge}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Phone</label>
+            </div>
+            <div class="col-md-6">
+              <p>{{user.userPhoneNo}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Address</label>
+            </div>
+            <div class="col-md-6">
+              <p>{{user.userAddress}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<app-footer></app-footer>
